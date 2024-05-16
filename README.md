@@ -4,9 +4,10 @@
 Yura Choi<sup>1</sup>,
 [Youngjae Yu](https://yj-yu.github.io/home/)<sup>1</sup>, 
 [Dongyeop Kang](https://dykang.github.io)<sup>2</sup>,
-[Jonghyun Choi](https://ppolon.github.io)<sup>1,&dagger;</sup><br>
+[Jonghyun Choi](https://ppolon.github.io)<sup>3,&dagger;</sup><br>
 <sup>1</sup>Yonsei University,
-<sup>2</sup>University of Minnesota<br>
+<sup>2</sup>University of Minnesota,
+<sup>3</sup>Seoul National University<br>
 <sup>&dagger;</sup>Corresponding Author<br>
 [ACL 2024](https://2024.aclweb.org)
 
