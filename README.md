@@ -21,6 +21,6 @@ Yura Choi<sup>1</sup>,
       author    = {Daechul Ahn and Yura Choi and Youngjae Yu and Dongyeop Kang and Jonghyun Choi},
       title     = {Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback},
       booktitle = {ACL},
-      year={2024}
+      year      = {2024}
 }
 ```
