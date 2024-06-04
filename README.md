@@ -25,3 +25,8 @@ Yura Choi<sup>1</sup>,
       year      = {2024}
 }
 ```
+
+## Acknowledgement
+- [LLaVA](https://github.com/haotian-liu/LLaVA.git)
+- [LLaVA-RLHF](https://github.com/llava-rlhf/LLaVA-RLHF.git)
+- [VideoChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT.git)
