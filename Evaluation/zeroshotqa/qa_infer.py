@@ -27,56 +27,7 @@ import json
 from random import randint
 from glob import glob
 
-
-def load_json(fpath):
-    with open(fpath, "r") as f:
-        return json.load(f)
-    
-def save_json(data, fpath):
-    with open(fpath, "w") as f:
-        json.dump(data, f)
-
-
-def generate_equal_distribution(N, M):
-    if M > N:
-        raise ValueError("M should be lower than N")
-    
-    result = []
-    count = N // M  # 각 숫자별로 반복되는 횟수
-    
-    for i in range(1, M+1):
-        result.extend([i] * count)
-    
-    # 나머지 N % M 만큼 남는 부분을 처리
-    remainder = N % M
-    for i in range(1, remainder+1):
-        result.append(i)
-    
-    return result
-
-
-def generate_numbers_with_equal_intervals(N, num_frames):
-    if N < num_frames:
-        raise ValueError("N should be at least 4 for generating 4 numbers with equal intervals.")
-    
-    # 등간격을 계산
-    interval = (N - 1) // (num_frames-1)
-    
-    # 1부터 N까지의 숫자 중에서 등간격으로 4개의 숫자를 선택
-    selected_numbers = [1 + i * interval for i in range(50)]
-    
-    return selected_numbers
-
-
-
-def load_image(image_file):
-    if image_file.startswith('http://') or image_file.startswith('https://'):
-        response = requests.get(image_file)
-        image = Image.open(BytesIO(response.content)).convert('RGB')
-    else:
-        image = Image.open(image_file).convert('RGB')
-    return image
-
+from Evaluation.infer_utils import get_chunk, load_json, save_json, load_frames
 
 
 def main(args):
@@ -111,7 +62,8 @@ def main(args):
     else:
         args.conv_mode = conv_mode
     
-    gt_qa = load_json(args.gt_file_qa)
+    gt_qa_all = load_json(args.gt_file_qa)
+    gt_qa = get_chunk(gt_qa_all, args.chunks, args.chunk_idx)
 
     output_list = []
 
@@ -130,21 +82,9 @@ def main(args):
         if id in prev_pred_ids: continue
         
         img_full_path = os.path.join(args.frames_path, 'v_' + video_name)
-        # img_full_path = 'playground/data/anet_vidchatgpt_test_1fps_frames/v_' + video_name
         full_vidframes_list = glob(img_full_path + '/*')
         full_vidframes_list.sort()
-        
-        if len(full_vidframes_list) < args.num_frames: 
-            tmp_indexs = generate_equal_distribution(args.num_frames, len(full_vidframes_list))
-            tmp_indexs.sort()
-            imgs = [full_vidframes_list[x-1] for x in tmp_indexs]
-            imgs.sort()
-        else:
-            imgs = [full_vidframes_list[x-1] for x in generate_numbers_with_equal_intervals(len(full_vidframes_list), args.num_frames)]
-            imgs.sort()
-            
-        # image load
-        images = [load_image(img) for img in imgs]
+        images = load_frames(full_vidframes_list, args.num_frames)
         # Similar operation in model_worker.py
         image_tensor = process_images(images, image_processor, args)
         if args.images:
@@ -230,6 +170,9 @@ if __name__ == "__main__":
     parser.add_argument("--image-aspect-ratio", type=str, default='pad')
     parser.add_argument('--gt_file_qa', help='Path to the ground truth file containing question.', required=True)
     parser.add_argument("--resume", action="store_true", default=False, help="Whether to resume inference")
+    
+    parser.add_argument("--chunks", type=int)
+    parser.add_argument("--chunk_idx", type=int)
 
     args = parser.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)
