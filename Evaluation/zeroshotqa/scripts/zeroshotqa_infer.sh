@@ -21,17 +21,19 @@ SPLITS=( 0 1 2 3 4 5 6 7 )
 N_SPLIT=8
 
 for DEVICE_ID in ${GPU_IDS[@]}; do
-    echo $DEVICE_ID
     CUDA_VISIBLE_DEVICES=$DEVICE_ID python3 Evaluation/zeroshotqa/qa_infer.py \
     --model-path $MODEL_PATH \
     --model-base $MODEL_BASE \
-    --gt_file_qa $DATA_PATH/$TASKNAME/test_qa_seg_$N_SPLIT"_${SPLITS[$DEVICE_ID]}".json \
+    --gt_file_qa $DATA_PATH/$TASKNAME/test_qa.json \
+    --chunks $N_SPLIT \
+    --chunk_idx ${SPLITS[$DEVICE_ID]} \
     --output_dir $PRED_DIR \
-    --output_name $TASKNAME"_""${SPLITS[$DEVICE_ID]}" \
+    --output_name $TASKNAME"_"$CHUNKS"_${SPLITS[$DEVICE_ID]}" \
     --images \
     --frames_path $FRAMES_PATH \
     --num_frames 50 \
     --resume \
     &
 done
+wait
 
