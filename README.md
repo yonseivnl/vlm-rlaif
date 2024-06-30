@@ -1,7 +1,7 @@
 # VLM-RLAIF
 > [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://arxiv.org/pdf/2402.03746),            
-[Daechul Ahn](https://dcahn12.github.io)<sup>1</sup>,
-[Yura Choi](https://yuuraa.github.io)<sup>1</sup>,
+[Daechul Ahn](https://dcahn12.github.io)<sup>1,3</sup>,
+[Yura Choi](https://yuuraa.github.io)<sup>1,3</sup>,
 [Youngjae Yu](https://yj-yu.github.io/home/)<sup>1</sup>, 
 [Dongyeop Kang](https://dykang.github.io)<sup>2</sup>,
 [Jonghyun Choi](https://ppolon.github.io)<sup>3,&dagger;</sup><br>
