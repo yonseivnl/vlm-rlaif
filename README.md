@@ -60,6 +60,9 @@
 }
 ```
 
+## License
+GNU GENERAL PUBLIC LICENSE
+
 ## Acknowledgement
 - [LLaVA](https://github.com/haotian-liu/LLaVA.git)
 - [LLaVA-RLHF](https://github.com/llava-rlhf/LLaVA-RLHF.git)
