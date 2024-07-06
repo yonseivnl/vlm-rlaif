@@ -1,5 +1,5 @@
 # VLM-RLAIF
-> [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://arxiv.org/pdf/2402.03746),            
+> [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://dcahn12.github.io/projects/RLAIF/),            
 [Daechul Ahn](https://dcahn12.github.io)<sup>1,3</sup>,
 [Yura Choi](https://yuuraa.github.io)<sup>1,3</sup>,
 [Youngjae Yu](https://yj-yu.github.io/home/)<sup>1</sup>, 
@@ -55,6 +55,9 @@
       year      = {2024}
 }
 ```
+
+## License
+GNU GENERAL PUBLIC LICENSE
 
 ## Acknowledgement
 - [LLaVA](https://github.com/haotian-liu/LLaVA.git)
