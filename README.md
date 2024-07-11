@@ -40,7 +40,7 @@
 
 
 ## Training w/ RLAIF
-**Available Soon**
+- Refer to the [RLAIF](./RLAIF) folder to train reward model, policy model, and do PPO
 
 
 ## Data Generation
