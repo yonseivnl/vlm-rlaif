@@ -25,10 +25,6 @@
 
 
 ## Dataset and Checkpoints
-- RLAIF checkpoint: huggingface
-    [SNUMPR/vlm_rlaif_video_llava_7b](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)
-
-
 | Model | Size | Checkpoint | corr. | detail. | context | temp. | const. |
 |----------|----------|-----------|---|---|---|---|---|
 | RLAIF | 7B | [SNUMPR/vlm_rlaif_video_llava_7b](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)| 3.63 | 3.25 | 4.00 | 3.23 | 3.32 |
@@ -44,7 +40,7 @@
 
 
 ## Training w/ RLAIF
-**Available Soon**
+- Refer to the [RLAIF](./RLAIF) folder to train reward model, policy model, and do PPO
 
 
 ## Data Generation
