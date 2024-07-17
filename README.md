@@ -19,7 +19,7 @@
 
 ## 📣 News 
 - [Jul 16, 2024]  🎙️ **VLM-RLAIF** has been selected for ***oral*** presentation at **ACL 2024**! See you in Bangkok 🇹🇭
-- [Jun 16, 2024] 🔥 Our next work on aligning large video multimodal model, **i-SRT**🚄, is now available on [[arXiv](), [code]()]
+- [Jun 16, 2024] 🔥 Our next work on aligning large video multimodal model, **i-SRT**🚄, is now available on [[arXiv](https://arxiv.org/pdf/2406.11280v1), [code](https://github.com/snumprlab/SRT)]
 - [May 31, 2024] 🥳 **VLM-RLAIF** is accepted to **ACL 2024** !
 
 &nbsp;
