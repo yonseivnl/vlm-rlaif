@@ -46,6 +46,7 @@
 |----------|----------|-----------|---|---|---|---|---|
 | RLAIF | 7B | [SNUMPR/vlm_rlaif_video_llava_7b](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)| 3.63 | 3.25 | 4.00 | 3.23 | 3.32 |
 | SFT | 7B | [SNUMPR/vlm_sft_video_llava_7b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_7b) | 2.79 | 2.82 | 3.37 | 2.28 | 2.49 |
+| SFT | 13B | [SNUMPR/vlm_sft_video_llava_13b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_13b) | - | - | - | - | - |
 
 &nbsp;
 
@@ -62,7 +63,7 @@
 ## 📊 Evaluation
 ### Zero-shot QA
 - Prepare evaluation dataset
-    - download zero-shot QA evaluation dataset & videos for zero-shot question answering following [Video-LLaVA](https://github.com/mbzuai-oryx/Video-ChatGPT.git).
+    - download zero-shot QA evaluation dataset & videos for zero-shot question answering following [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md).
 - Run evaluation
     ```bash
         bash Evaluation/zeroshotqa/scripts/zeroshotqa_pipeline.sh
