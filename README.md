@@ -52,7 +52,7 @@
 | Dataset Usage | Link | Filename |
 |----------|----------|---------------|
 | SFT (short) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
-| SFT (long) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
+| SFT (long) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_long.json |
 | Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RM_13b_v1_dataset_39k.json |
 | PPO init | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | PPO_init.json |
 | RLAIF | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RL_data.json |
