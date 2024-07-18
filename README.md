@@ -1,4 +1,4 @@
-# 🤖 VLM-RLAIF (ACL 2024)
+# 🤖 VLM-RLAIF (ACL'24 Oral)
 > [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://dcahn12.github.io/projects/RLAIF/),            
 [Daechul Ahn](https://dcahn12.github.io)<sup>1,3</sup>,
 [Yura Choi](https://yuuraa.github.io)<sup>1,3</sup>,
@@ -51,11 +51,11 @@
 
 | Dataset Usage | Link | Filename |
 |----------|----------|---------------|
-| SFT (short) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
-| SFT (long) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_long.json |
-| Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RM_13b_v1_dataset_39k.json |
-| PPO init | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | PPO_init.json |
-| RLAIF | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RL_data.json |
+| SFT (short) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
+| SFT (long) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets) | SFT_long.json |
+| Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets) | RM_13b_v1_dataset_39k.json |
+| PPO init | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets) | PPO_init.json |
+| RLAIF | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets) | RL_data.json |
 
 &nbsp;
 
