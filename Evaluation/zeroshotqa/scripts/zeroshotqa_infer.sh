@@ -28,7 +28,7 @@ for DEVICE_ID in ${GPU_IDS[@]}; do
     --chunks $N_SPLIT \
     --chunk_idx ${SPLITS[$DEVICE_ID]} \
     --output_dir $PRED_DIR \
-    --output_name $TASKNAME"_"$CHUNKS"_${SPLITS[$DEVICE_ID]}" \
+    --output_name $N_SPLIT"_${SPLITS[$DEVICE_ID]}" \
     --images \
     --frames_path $FRAMES_PATH \
     --num_frames 50 \
