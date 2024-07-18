@@ -15,11 +15,14 @@
 [![model-checkpoint-sft](https://img.shields.io/badge/Model-SFT-blue)](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)
 [![paper](https://img.shields.io/badge/Paper-Arxiv-green)](https://arxiv.org/abs/2402.03746)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tuning-large-multimodal-models-for-videos/video-based-generative-performance)](https://paperswithcode.com/sota/video-based-generative-performance?p=tuning-large-multimodal-models-for-videos)
+
 &nbsp;
 
 ## 📣 News 
-- [Jul 16, 2024]  🎙️ **VLM-RLAIF** has been selected for ***oral*** presentation at **ACL 2024**! See you in Bangkok 🇹🇭
-- [Jun 16, 2024] 🔥 Our next work on aligning large video multimodal model, **i-SRT**🚄, is now available on [[arXiv](https://arxiv.org/pdf/2406.11280v1), [code](https://github.com/snumprlab/SRT)]
+- [Jul 16, 2024]  🎙️ **VLM-RLAIF** has been selected for ✨***oral presentation***✨ at **ACL 2024**! See you in Bangkok 🇹🇭
+- [Jun 16, 2024] 🔥 Our next work on aligning large video multimodal model, **i-SRT**🚄, is now available
+ [[arXiv](https://arxiv.org/pdf/2406.11280v1), [code](https://github.com/snumprlab/srt)]
 - [May 31, 2024] 🥳 **VLM-RLAIF** is accepted to **ACL 2024** !
 
 &nbsp;
@@ -43,15 +46,31 @@
 |----------|----------|-----------|---|---|---|---|---|
 | RLAIF | 7B | [SNUMPR/vlm_rlaif_video_llava_7b](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)| 3.63 | 3.25 | 4.00 | 3.23 | 3.32 |
 | SFT | 7B | [SNUMPR/vlm_sft_video_llava_7b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_7b) | 2.79 | 2.82 | 3.37 | 2.28 | 2.49 |
+&nbsp;
 
+| Dataset Usage | Link | Filename |
+|----------|----------|---------------|
+| SFT (short) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
+| SFT (long) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
+| Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RM_13b_v1_dataset_39k.json |
+| PPO init | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | PPO_init.json |
+| RLAIF | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RL_data.json |
 &nbsp;
 
 ## 📊 Evaluation
+### Zero-shot QA
+- Prepare evaluation dataset
+    - download zero-shot QA evaluation dataset & videos for zero-shot question answering following [Video-LLaVA](https://github.com/mbzuai-oryx/Video-ChatGPT.git).
+- Run evaluation
+    ```bash
+        bash Evaluation/zeroshotqa/scripts/zeroshotqa_pipeline.sh
+    ```
+### Video Generative Benchmark
 - Prepare evaluation dataset
     - download evaluation dataset & videos for zero-shot question answering from [VideoChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT.git).
 - Run evaluation
     ```bash
-        bash Evaluation/zeroshotqa/scripts/zeroshotqa_pipeline.sh
+        bash Evaluation/scripts/videochatgpt_pipeline.sh
     ```
 &nbsp;
 
