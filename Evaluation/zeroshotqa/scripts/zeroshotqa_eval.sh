@@ -1,6 +1,4 @@
 NUM_TASKS=10
-API_KEY="OPENAI KEY HERE"
-source Evaluation/.api_keys/key1
 
 PRED_DIR=$1
 TASKNAME=$2

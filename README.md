@@ -1,4 +1,4 @@
-# 🤖 VLM-RLAIF (ACL 2024)
+# 🤖 VLM-RLAIF (ACL'24 Oral)
 > [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://dcahn12.github.io/projects/RLAIF/),            
 [Daechul Ahn](https://dcahn12.github.io)<sup>1,3</sup>,
 [Yura Choi](https://yuuraa.github.io)<sup>1,3</sup>,
@@ -12,7 +12,7 @@
 [ACL 2024](https://2024.aclweb.org) (To appear)
 
 [![model-checkpoint](https://img.shields.io/badge/Model-RLAIF-blue)](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)
-[![model-checkpoint-sft](https://img.shields.io/badge/Model-SFT-blue)](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)
+[![model-checkpoint-sft](https://img.shields.io/badge/Model-SFT-blue)](https://huggingface.co/SNUMPR/vlm_sft_video_llava_7b)
 [![paper](https://img.shields.io/badge/Paper-Arxiv-green)](https://arxiv.org/abs/2402.03746)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tuning-large-multimodal-models-for-videos/video-based-generative-performance)](https://paperswithcode.com/sota/video-based-generative-performance?p=tuning-large-multimodal-models-for-videos)
@@ -49,20 +49,20 @@
 
 &nbsp;
 
-| Dataset Usage | Link | Filename |
-|----------|----------|---------------|
-| SFT (short) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
-| SFT (long) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | SFT_short.json |
-| Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RM_13b_v1_dataset_39k.json |
-| PPO init | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | PPO_init.json |
-| RLAIF | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets) | RL_data.json |
+| Dataset Usage | Link |
+|----------|----------|
+| SFT (short) | [SNUMPR/vlm_rlaif_datasets/SFT_short.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/SFT_short.json) |
+| SFT (long) | [SNUMPR/vlm_rlaif_datasets/SFT_long.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/SFT_long.json) |
+| Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets/RM_13b_v1_dataset_39k.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/RM_13b_v1_dataset_39k.json) |
+| PPO init | [SNUMPR/vlm_rlaif_datasets/PPO_init.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/PPO_init.json) |
+| RLAIF | [SNUMPR/vlm_rlaif_datasets/RL_data.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/RL_data.json) |
 
 &nbsp;
 
 ## 📊 Evaluation
 ### Zero-shot QA
 - Prepare evaluation dataset
-    - download zero-shot QA evaluation dataset & videos for zero-shot question answering following [Video-LLaVA](https://github.com/mbzuai-oryx/Video-ChatGPT.git).
+    - download zero-shot QA evaluation dataset & videos for zero-shot question answering following [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md).
 - Run evaluation
     ```bash
         bash Evaluation/zeroshotqa/scripts/zeroshotqa_pipeline.sh

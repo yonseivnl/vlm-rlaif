@@ -8,8 +8,8 @@ MODEL_PATH=SNUMPR/vlm_rlaif_video_llava_7b
 MODEL_BASE=none
 OUTPUT_DIR=results/vlm_rlaif_video_llava_7b
 FRAMES_PATH="playground/data/video_frames"
-export API_KEY="YOUR OPENAI API KEY HERE"
 
+export API_KEY="YOUR OPENAI API KEY HERE"
 TASKNAMES=( anet msrvtt msvd tgif )
 # ================== CHANGE HERE ==================
 
