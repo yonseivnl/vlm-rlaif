@@ -49,13 +49,13 @@
 
 &nbsp;
 
-| Dataset Usage | Link | Filename |
-|----------|----------|---------------|
-| SFT (short) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/SFT_short.json) | SFT_short.json |
-| SFT (long) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/SFT_long.json) | SFT_long.json |
-| Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/RM_13b_v1_dataset_39k.json) | RM_13b_v1_dataset_39k.json |
-| PPO init | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/PPO_init.json) | PPO_init.json |
-| RLAIF | [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/RL_data.json) | RL_data.json |
+| Dataset Usage | Link |
+|----------|----------|
+| SFT (short) | [SNUMPR/vlm_rlaif_datasets/SFT_short.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/SFT_short.json) |
+| SFT (long) | [SNUMPR/vlm_rlaif_datasets/SFT_long.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/SFT_long.json) |
+| Preference dataset (for RM) | [SNUMPR/vlm_rlaif_datasets/RM_13b_v1_dataset_39k.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/RM_13b_v1_dataset_39k.json) |
+| PPO init | [SNUMPR/vlm_rlaif_datasets/PPO_init.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/PPO_init.json) |
+| RLAIF | [SNUMPR/vlm_rlaif_datasets/RL_data.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/RL_data.json) |
 
 &nbsp;
 
