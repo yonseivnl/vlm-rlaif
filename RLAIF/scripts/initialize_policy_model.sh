@@ -22,7 +22,7 @@ BATCH_SIZE=8
 GRAD_ACCUMULATION=2
 
 deepspeed \
-    finetune_lora_sft_ds.py \
+    finetune_policy_init.py \
     --deepspeed scripts/zero2.json \
     --do_train \
     --do_eval \
