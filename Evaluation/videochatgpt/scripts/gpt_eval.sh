@@ -1,5 +1,6 @@
 NUM_TASKS=10
-API_KEY="OPENAI KEY HERE"
+# API_KEY="OPENAI KEY HERE"
+source Evaluation/.api_keys/key1
 
 OUTPUT_DIR=$1
 TASKID=$2
