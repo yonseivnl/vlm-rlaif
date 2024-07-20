@@ -1,11 +1,11 @@
 # Preparing Training & Evaluation Dataset
 ## 🗃️ Training Dataset
 - **Note** Our Dataset is built upon four sources of datasets.
-    1. [Video-ChatGPT Video Instruction Dataset]()
+    1. [Video-ChatGPT Video Instruction Dataset](https://github.com/mbzuai-oryx/Video-ChatGPT/blob/main/docs/train_video_chatgpt.md)
         - ActivityNet, WebVid videos
         - 100K instructions
     2. [Video Localized Narratives Dataset](https://github.com/google/video-localized-narratives/blob/main/data_preparation.md)
-    3. [How2QA](https://arxiv.org/pdf/2005.00200v2)
+    3. [How2QA](https://github.com/ych133/How2R-and-How2QA)
     4. [NextQA](https://doc-doc.github.io/docs/nextqa.html)
 
 &nbsp;
@@ -23,7 +23,7 @@
 - 🎥 **Videos**: Download source videos following the instructions below, and then extract 50 frames per each video to train the model. 
 
     1. **Video-ChatGPT Instruction Dataset - ActivityNet videos**:
-        - **Frames** (🤗  [SNUMPR/vlm_rlaif_train_anet_frames](https://huggingface.co/SNUMPR/datasets/vlm_rlaif_train_anet_frames)): Our version of preprocessed videos, extracted 50 frames per each video 
+        - **Frames** (🤗  [SNUMPR/vlm_rlaif_train_anet_frames](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_train_anet_frames)): Our version of preprocessed videos, extracted 50 frames per each video 
         - [Videos](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/hanoona_bangalath_mbzuai_ac_ae/EatOpE7j68tLm2XAd0u6b8ABGGdVAwLMN6rqlDGM_DwhVA?e=90WIuW): video as mp4 format from original paper
     2. Video Localized Narratives Dataset
         - See [download instructions](https://github.com/google/video-localized-narratives/blob/main/data_preparation.md) for the original dataset
