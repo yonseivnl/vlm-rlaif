@@ -18,8 +18,8 @@ pip install datasets
 ```
 
 We use following **SFT checkpoints** at huggingface to initialize RM and Policy model
-- SNUMPR/vlm_sft_video_llava_13b
-- SNUMPR/vlm_sft_video_llava_7b
+- [SNUMPR/vlm_sft_video_llava_13b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_13b) -> initialize RM
+- [SNUMPR/vlm_sft_video_llava_7b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_7b) -> initialize Policy model
 
 
 ## 1. Training the Reward Model
