@@ -7,6 +7,7 @@
     2. [Video Localized Narratives Dataset](https://github.com/google/video-localized-narratives/blob/main/data_preparation.md)
     3. [How2QA](https://github.com/ych133/How2R-and-How2QA)
     4. [NextQA](https://doc-doc.github.io/docs/nextqa.html)
+    5. [WebVid](https://github.com/m-bain/webvid)
 
 &nbsp;
 - 📜 **Instructions**: Download all of our video instructions from 🤗 [SNUMPR/vlm_rlaif_datasets](https://huggingface.co/SNUMPR/vlm_rlaif_datasets)
