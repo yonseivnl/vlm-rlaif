@@ -1,5 +1,5 @@
 # 🤖 VLM-RLAIF (ACL'24 Oral)
-> [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://dcahn12.github.io/projects/RLAIF/),            
+> [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://dcahn12.github.io/projects/vlm-rlaif/),            
 [Daechul Ahn](https://dcahn12.github.io)<sup>1,3</sup>,
 [Yura Choi](https://yuuraa.github.io)<sup>1,3</sup>,
 [Youngjae Yu](https://yj-yu.github.io/home/)<sup>1</sup>, 
