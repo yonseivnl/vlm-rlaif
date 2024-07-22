@@ -10,6 +10,23 @@ from torchvision.transforms import Compose, Lambda, ToTensor
 from torchvision.transforms.functional import to_pil_image
 
 
+def load_json(file_path):
+    with open(file_path, 'r') as f:
+        return json.load(f)
+
+def load_jsonl(file_path):
+    with open(file_path, 'r') as f:
+        return [json.loads(l) for l in f]
+    
+def save_json(data, file_path):
+    with open(file_path, 'w') as f:
+        json.dump(data, f)
+
+def save_jsonl(data, file_path):
+    with open(file_path, 'w') as f:
+        for d in data:
+            f.write(json.dumps(d) + '\n')
+
 def split_list(lst, n):
     """Split a list into n (roughly) equal-sized chunks"""
     chunk_size = math.ceil(len(lst) / n)  # integer division
