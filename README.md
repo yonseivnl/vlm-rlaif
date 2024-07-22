@@ -42,6 +42,8 @@
 
 
 ## 🗃️ Dataset and Checkpoints
+> Check [PREPARE_DATASET.md](./PREPARE_DATASET.md) to prepare training & validation datasets
+
 | Model | Size | Checkpoint | corr. | detail. | context | temp. | const. |
 |----------|----------|-----------|---|---|---|---|---|
 | RLAIF | 7B | [SNUMPR/vlm_rlaif_video_llava_7b](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)| 3.63 | 3.25 | 4.00 | 3.23 | 3.32 |
@@ -59,20 +61,16 @@
 
 &nbsp;
 
+
 ## 📊 Evaluation
-### Zero-shot QA
-- Prepare evaluation dataset
-    - download zero-shot QA evaluation dataset & videos for zero-shot question answering following [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md).
-- Run evaluation
+> Check [PREPARE_DATASET.md](./PREPARE_DATASET.md) to prepare training & validation datasets
+- **Zero-shot QA**
     ```bash
-        bash Evaluation/zeroshotqa/scripts/zeroshotqa_pipeline.sh
+    bash Evaluation/zeroshotqa/scripts/zeroshotqa_pipeline.sh
     ```
-### Video Generative Benchmark
-- Prepare evaluation dataset
-    - download evaluation dataset & videos for zero-shot question answering from [VideoChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT.git).
-- Run evaluation
+- **Video Generative Benchmark**
     ```bash
-        bash Evaluation/scripts/videochatgpt_pipeline.sh
+    bash Evaluation/scripts/videochatgpt_pipeline.sh
     ```
 &nbsp;
 
@@ -84,6 +82,7 @@
 
 ## 🔧 Data Generation
 **Available Soon**
+
 &nbsp;
 
 
