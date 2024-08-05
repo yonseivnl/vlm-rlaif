@@ -99,7 +99,8 @@
 &nbsp;
 
 ## License
-GNU GENERAL PUBLIC LICENSE
+- The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](./LICENSE) file.
+- The service is a research preview intended for non-commercial use only, subject to the model License of LLaMA
 &nbsp;
 
 ## Acknowledgement
