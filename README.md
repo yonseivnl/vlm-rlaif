@@ -1,5 +1,5 @@
 # 🤖 VLM-RLAIF (ACL'24 Oral)
-> [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://dcahn12.github.io/projects/RLAIF/),            
+> [**Tuning Large Multimodal Models for Videos using Reinforcement Learning from AI Feedback**](https://dcahn12.github.io/projects/vlm-rlaif/),            
 [Daechul Ahn](https://dcahn12.github.io)<sup>1,3</sup>,
 [Yura Choi](https://yuuraa.github.io)<sup>1,3</sup>,
 [Youngjae Yu](https://yj-yu.github.io/home/)<sup>1</sup>, 
@@ -108,7 +108,8 @@ Lora Checkpoints (used to train the model w/ PPO)
 &nbsp;
 
 ## License
-GNU GENERAL PUBLIC LICENSE
+- The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](./LICENSE) file.
+- The service is a research preview intended for non-commercial use only, subject to the model License of LLaMA
 &nbsp;
 
 ## Acknowledgement
