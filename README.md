@@ -14,12 +14,15 @@
 [![model-checkpoint](https://img.shields.io/badge/Model-RLAIF-blue)](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)
 [![model-checkpoint-sft](https://img.shields.io/badge/Model-SFT-blue)](https://huggingface.co/SNUMPR/vlm_sft_video_llava_7b)
 [![paper](https://img.shields.io/badge/Paper-Arxiv-green)](https://arxiv.org/abs/2402.03746)
+[![demo](https://img.shields.io/badge/Demo-HuggingFace-yellow)](https://huggingface.co/spaces/SNUMPR/vlm-rlaif-demo)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/tuning-large-multimodal-models-for-videos/video-based-generative-performance)](https://paperswithcode.com/sota/video-based-generative-performance?p=tuning-large-multimodal-models-for-videos)
 
 &nbsp;
 
 ## 📣 News 
+- [Aug 07, 2024] We update our trained lora checkpoint of reward model & policy model initialization to Hugginface 
+- [Aug 06, 2024] Our model is available in HuggingFace Spaces!
 - [Jul 16, 2024]  🎙️ **VLM-RLAIF** has been selected for ✨***oral presentation***✨ at **ACL 2024**! See you in Bangkok 🇹🇭
 - [Jun 16, 2024] 🔥 Our next work on aligning large video multimodal model, **i-SRT**🚄, is now available
  [[arXiv](https://arxiv.org/pdf/2406.11280v1), [code](https://github.com/snumprlab/srt)]
@@ -48,6 +51,12 @@
 |----------|----------|-----------|---|---|---|---|---|
 | RLAIF | 7B | [SNUMPR/vlm_rlaif_video_llava_7b](https://huggingface.co/SNUMPR/vlm_rlaif_video_llava_7b)| 3.63 | 3.25 | 4.00 | 3.23 | 3.32 |
 | SFT | 7B | [SNUMPR/vlm_sft_video_llava_7b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_7b) | 2.79 | 2.82 | 3.37 | 2.28 | 2.49 |
+
+Lora Checkpoints (used to train the model w/ PPO)
+| Model | Size | Lora Checkpoint |
+|----------|----------|-----------|
+| Policy init | 7B | [SNUMPR/vlm_policy_init_7b_lora](https://huggingface.co/SNUMPR/vlm_policy_init_7b_lora) |
+| Reward model | 13B | [SNUMPR/vlm_rm_13b_lora](https://huggingface.co/SNUMPR/vlm_rm_13b_lora) |
 
 &nbsp;
 
@@ -99,7 +108,8 @@
 &nbsp;
 
 ## License
-GNU GENERAL PUBLIC LICENSE
+- The majority of this project is released under the Apache 2.0 license as found in the [LICENSE](./LICENSE) file.
+- The service is a research preview intended for non-commercial use only, subject to the model License of LLaMA
 &nbsp;
 
 ## Acknowledgement

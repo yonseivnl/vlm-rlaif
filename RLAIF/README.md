@@ -17,12 +17,17 @@ pip install bitsandbytes==0.41.0
 pip install datasets
 ```
 
-We use following **SFT checkpoints** at huggingface to initialize RM and Policy model
+We use following **SFT checkpoints** at huggingface to initialize RM and Policy model. Follow process 1. and 2. to train the whole PPO process from SFT
 - [SNUMPR/vlm_sft_video_llava_13b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_13b) -> initialize RM
 - [SNUMPR/vlm_sft_video_llava_7b](https://huggingface.co/SNUMPR/vlm_sft_video_llava_7b) -> initialize Policy model
 
+Or, you can use our lora weights of trained RM and Policy model, and directly progress to step 3.
+- [SNUMPR/vlm_rm_13b_lora](https://huggingface.co/SNUMPR/vlm_rm_13b_lora)
+- [SNUMPR/vlm_policy_init_7b_lora](https://huggingface.co/SNUMPR/vlm_policy_init_7b_lora)
+<!-- - [SNUMPR/vlm_rm_video_llava_7b_lora](https://huggingface.co/SNUMPR/vlm_rm_video_llava_7b_lora) -->
 
-## 1. Training the Reward Model
+
+## 1. Train the Reward Model
 **Note**: For both 7b and 13b policy models, we use the same 13b reward model.
 ```bash
 bash RLAIF/scripts/train_reward_model.sh \
@@ -45,7 +50,8 @@ bash RLAIF/scripts/initialize_policy_model.sh \
 		checkpoints/Video_LLaVA_Policy_Init_7b_lora \ # path to save policy model init
 ```
 
-## 3. Training the RL Model with PPO
+## 3. Train the RL Model with PPO
+#### Using your trained model
 ```bash
 bash RLAIF/scripts/train_rl_model.sh \
 		openai/clip-vit-large-patch14-336 \ # vision tower init
@@ -57,3 +63,23 @@ bash RLAIF/scripts/train_rl_model.sh \
 		checkpoints/Video_LLaVA_RLAIF_7b \ # path to save ppo model
 		True \ # use latest checkpoint of reward model
 ```
+
+#### Using provided RM and policy init
+1. Download lora weights for RM & initialized Policy model  
+	```bash
+	cd checkpoints
+	git clone https://huggingface.co/SNUMPR/vlm_policy_init_7b_lora # Clone policy init lora
+	git clone https://huggingface.co/SNUMPR/vlm_rm_video_llava_13b_lora  # Clone reward model lora
+	```
+2. Train w/ PPO
+	```bash
+	bash RLAIF/scripts/train_rl_model.sh \
+			openai/clip-vit-large-patch14-336 \ # vision tower init
+			dataset/videos \ # path to videos
+			dataset/RL_data.json \ # training data
+			SNUMPR/vlm_sft_video_llava_7b \ # sft model
+			checkpoints/vlm_policy_init_7b_lora \ # path to trained policy model lora
+			checkpoints/vlm_rm_video_llava_13b_lora \ # path to trained reward model lora
+			checkpoints/Video_LLaVA_RLAIF_7b \ # path to save ppo model
+			False \ # use provided checkpoint of reward model
+	```
