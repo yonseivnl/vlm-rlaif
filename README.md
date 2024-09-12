@@ -68,7 +68,7 @@ Lora Checkpoints (used to train the model w/ PPO)
 | RLAIF | [SNUMPR/vlm_rlaif_datasets/RL_data.json](https://huggingface.co/datasets/SNUMPR/vlm_rlaif_datasets/blob/main/RL_data.json) |
 
 &nbsp;
-   
+    
                                      
 ## 📊 Evaluation
 > Check [PREPARE_DATASET.md](./PREPARE_DATASET.md) to prepare training & validation datasets
