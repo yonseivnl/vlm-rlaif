@@ -41,7 +41,7 @@
     <img src="assets/images/rlaif_feedback_teaser.png" alt="" width="98%">
 <p>Pipeline of VLM-RLAIF</p>
 </div>
-
+ 
 
 ## 🗃️ Dataset and Checkpoints
 > Check [PREPARE_DATASET.md](./PREPARE_DATASET.md) to prepare training & validation datasets
